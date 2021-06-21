@@ -1,0 +1,30 @@
+<!-- <nav class="search">
+    <form class="search_form">
+        <input type="text" name="search" placeholder="Search for a recipe" class="search__input" [(ngModel)]="search">
+        <button type="submit" class="search__button" (click)="fetchRecipe()"> Search </button>
+    </form>
+</nav>
+<div  >
+        <app-card *ngFor="let recipe of RecipeData" [url]="recipe.recipe.image" [name]="recipe.recipe.label"></app-card>
+</div> -->
+
+
+<div>
+    <h1 style="padding: 5px;"> <b>{{keyword}}</b></h1>
+    <hr>
+  <div class="container-fluid">
+    <div class="row">
+  <div class="card mx-auto my-3" style="width: 20rem;" *ngFor="let display of displays">
+    <img class="card-img-top" src="{{display.recipe.image}}" alt="Card image cap">
+    <div class="card-body">
+      <h6 class="card-title text-center mb-3" style="color: rgb(28, 27, 121);">
+         {{display.recipe.label}}
+      </h6>
+      <div class="heading text-center">{{display.recipe.dishType}}</div>
+        <div class="text-center mt-4">
+          <a href="{{display.recipe.url}}" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+        </div>
+        </div>
+        </div> 
